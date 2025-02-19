@@ -9,11 +9,13 @@ import Login from "./components/Login/Login.jsx";
 import UserDashbaord from "./Pages/Dashbaord/UserDashbaord.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import ResetPassword from "./components/ResetPassword/ResetPassword.jsx";
+import ContestPage from "./components/ContestPage/ContestPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
+      <Route path="/contest" element={<ContestPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/reset" element={<ResetPassword />} />

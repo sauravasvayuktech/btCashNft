@@ -827,7 +827,7 @@ button.btn-filled {
   .mobile-nav {
     display: flex;
   }
-  .mobile-footer{
+  .mobile-footer {
     display: block;
   }
 }
@@ -918,8 +918,11 @@ button.btn-filled {
   .loginform.signupForm {
     margin-bottom: 6rem;
   }
-  .loginWrapper.resetWrapper{
+  .loginWrapper.resetWrapper {
     min-height: 80vh;
     margin-block: 0;
+  }
+  section.singlePage-wrapper {
+    margin-bottom: 5rem;
   }
 }
