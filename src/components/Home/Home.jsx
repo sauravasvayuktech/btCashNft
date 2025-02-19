@@ -190,7 +190,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Live Bid</h3>
             <div>
               <Link to="">
@@ -199,6 +199,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -226,7 +227,7 @@ const Home = () => {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -245,7 +246,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper pt-0">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Upcoming Bid</h3>
             <div>
               <Link to="">
@@ -254,6 +255,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -281,7 +283,7 @@ const Home = () => {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -300,7 +302,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper pt-0">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Completed Bid</h3>
             <div>
               <Link to="">
@@ -309,6 +311,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -336,7 +339,7 @@ const Home = () => {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -353,7 +356,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="winners-list-wrapper mb-5">
+      <section className="winners-list-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="winner-list-title mb-4">
             <h3>Hall of Champions: Winners List</h3>
@@ -370,24 +373,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="winners-list-wrapper mb-5">
-        <Container fluid>
-          <div className="winner-list-title mb-4">
-            <h3>Completed Bid</h3>
-          </div>
-          <Row>
-            {winnerData.map((elem, index) => (
-              <>
-                <Col lg={4} key={index}>
-                  <WinnerList winnerData={elem} />
-                </Col>
-              </>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      <section className="howPlay-wrapper mb-5">
+      <section className="howPlay-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="howPlay-title mb-4">
             <h3>How to Play</h3>
@@ -404,7 +390,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="features-wrapper mb-5">
+      <section className="features-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="howPlay-title mb-4">
             <h3>Our Features</h3>

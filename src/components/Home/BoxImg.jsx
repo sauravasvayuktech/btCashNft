@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import boxImg from "../../assets/Images/boxImg.jpg";
 
 const BoxImg = ({data}) => {
   const { boxImg, value, title, auth, price } = data;

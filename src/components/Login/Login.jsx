@@ -7,7 +7,7 @@ const Login = () => {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const togglePasswordVisibility = () => {
-      setIsPasswordVisible(!isPasswordVisible);
+      setIsPasswordVisible(!isPasswordVisible); 
     };
 
     const onSubmitHandle = (e) => {
@@ -33,7 +33,7 @@ const Login = () => {
                   className="w-100 px-3 py-2 rounded"
                 />
               </div>
-              <div className="">
+              <div className="passwordAreaInput">
                 <label htmlFor="password">Password</label>
                 <br />
                 <div className="inputArea">
@@ -51,14 +51,13 @@ const Login = () => {
                   </button>
                 </div>
               </div>
-              <div></div>
               <button className="mb-4 mt-2 authText formSubmitBtn border-0" onClick={handleLogin}>
                 Login 
               </button>
               <p>
                 Don't have an account?{" "}
                 <span style={{ color: "#e9a031" }}>
-                  <Link to="/">Sign up</Link>
+                  <Link to="/signup">Sign up</Link>
                 </span>
               </p>
             </form>
