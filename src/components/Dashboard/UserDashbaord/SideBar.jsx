@@ -99,7 +99,8 @@ export default function SideBar() {
         transition: "width 0.3s",
       }}
     >
-      <div className="app-brand demo mt-4" style={{ margin: "auto" }}>
+    <div className="fixedLayout">
+    <div className="app-brand demo mt-4" style={{ margin: "auto" }}>
         <Link to="/user/dashboard" className="app-brand-link">
           <span className="app-brand-logo demo">
             <img
@@ -135,7 +136,7 @@ export default function SideBar() {
       <div className="menu-inner-shadow"></div>
       <ul className="menu-inner py-1 list-unstyled">
         <li className="menu-item open">
-          <Link to="/user/dashboard" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
+          <Link to="/user-dashboard" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
             {/* <i class="menu-icon tf-icons ti ti-smart-home"></i> */}
            
           
@@ -145,7 +146,7 @@ export default function SideBar() {
           </Link>
         </li>
         <li className="menu-item">
-          <Link to="/user/buyplan" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
+          <Link to="/user-profile" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
             {/* <i className="fa-solid fa-bars"></i> */}
           
            
@@ -157,7 +158,7 @@ export default function SideBar() {
         </li>
 
         <li className="menu-item">
-          <Link to="/user/staking-history" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
+          <Link to="/myaffiliates" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
             {/* <i className="fa-solid fa-trophy"></i> */}
            
               <TbAffiliateFilled className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
@@ -167,7 +168,7 @@ export default function SideBar() {
         </li>
 
         <li className="menu-item">
-          <Link to="/user/transaction" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
+          <Link to="/mytickets" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
            
          
             <IoTicketSharp className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
@@ -177,7 +178,7 @@ export default function SideBar() {
         </li>
 
         <li className="menu-item">
-          <Link to="/user/wallet" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
+          <Link to="/community" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
             {/* <i class="menu-icon tf-icons ti ti-wallet"></i> */}
      
             <RiUserCommunityFill className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
@@ -215,6 +216,7 @@ export default function SideBar() {
           </div>
         </li> */}
       </ul>
+    </div>
     </aside>
   );
 }
