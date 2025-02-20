@@ -51,6 +51,11 @@ const MyTickets = () => {
                                                         <Col xs={4} className='mb-4'>
                                                             <img src={ticketimg} height="100px" width={"100%"} />
                                                         </Col>
+                                                        <Col xs={4} className='mb-4'>
+                                                            <div className='ticket bg-white '>
+                                                                
+                                                                </div>
+                                                        </Col>
 
                                                     </Row>
                                                     <div className='text-end'>
