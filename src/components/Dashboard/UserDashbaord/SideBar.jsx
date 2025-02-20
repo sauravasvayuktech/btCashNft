@@ -5,7 +5,7 @@ import { MdDashboard } from "react-icons/md";
 
 import logo from "../../../assets/Images/logo.webp";
 import { BiSolidChevronLeftCircle, BiSolidChevronRightCircle } from "react-icons/bi";
-import { RiShieldUserFill, RiUserCommunityFill } from "react-icons/ri";
+import { RiLogoutCircleLine, RiShieldUserFill, RiUserCommunityFill } from "react-icons/ri";
 import { TbAffiliateFilled } from "react-icons/tb";
 import { IoTicketSharp } from "react-icons/io5";
 
@@ -195,9 +195,8 @@ export default function SideBar() {
         <li className="menu-item">
           <Link className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
             {/* <i className="menu-icon tf-icons ti ti-logout"></i> */}
-            <i className="bg-transparent d-flex justify-content-center align-items-center fs-3">
-              <img alt="" className="" style={{ width: '20px' }} />
-            </i>
+            <RiLogoutCircleLine className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
+            
             <div data-i18n="Logout" className={`${isOpen ? "" : "d-none"}`}>Logout</div>
           </Link>
         </li>

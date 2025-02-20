@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Container, Dropdown, Pagination, Row } from 'react-bootstrap'
 import SideBar from './SideBar'
 import { Link } from 'react-router'
+import FooterBottom from '../../Footer/FooterBottom'
 
 const MyAffiliates = () => {
     return (
@@ -214,15 +215,7 @@ const MyAffiliates = () => {
 
                         </Container>
                     </section>
-                    <div className="footer-bottom py-4" style={{ background: '#2a2a2a' }}>
-                        <p className="mb-0 text-center">
-                            Copyright 2025{" "}
-                            <span style={{ color: "#E9A031" }}>
-                                <Link to="/">Btcash NFT</Link>
-                            </span>{" "}
-                            All Rights Reserved.
-                        </p>
-                    </div>
+                    <FooterBottom/>
                 </Row>
             </Container>
         </>

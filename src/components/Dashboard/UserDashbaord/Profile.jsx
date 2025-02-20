@@ -6,6 +6,7 @@ import SideBar from './SideBar';
 import BoxImg from '../../Home/BoxImg';
 import boxImg from "../../../assets/Images/boxImg.jpg";
 import { Form, Link } from 'react-router';
+import FooterBottom from '../../Footer/FooterBottom';
 
 
 const Profile = () => {
@@ -74,15 +75,7 @@ const Profile = () => {
 
                         </Container>
                     </section>
-                    <div className="footer-bottom py-4" style={{ background: '#2a2a2a' }}>
-                        <p className="mb-0 text-center">
-                            Copyright 2025{" "}
-                            <span style={{ color: "#E9A031" }}>
-                                <Link to="/">Btcash NFT</Link>
-                            </span>{" "}
-                            All Rights Reserved.
-                        </p>
-                    </div>
+                    <FooterBottom/>
                 </Row>
             </Container>
         </>
