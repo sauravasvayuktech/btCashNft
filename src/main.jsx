@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import App from "./App.jsx";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { createRoot } from "react-dom/client";
 import Home from "./components/Home/Home.jsx";
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";

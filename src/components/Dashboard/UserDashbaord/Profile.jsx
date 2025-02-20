@@ -28,43 +28,43 @@ const Profile = () => {
                                             <h3>User Profile</h3>
 
                                         </div>
-                                        <Form>
-                                            <div class="mb-3 row">
-                                                <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" readonly class="form-control" id="staticEmail" value="John Doe" />
+                                        <Form className=''>
+                                            <div className="mb-3 row">
+                                                <label for="staticEmail" className="col-lg-2 col-12 col-form-label">Name</label>
+                                                <div className="col-lg-6 col-12">
+                                                    <input type="text" readonly className="form-control" id="staticEmail" value="John Doe" />
                                                 </div>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" readonly class="form-control" id="staticEmail" value="email@example.com" />
+                                            <div className="mb-3 row">
+                                                <label for="staticEmail" className="col-lg-2 col-12 col-form-label">Email</label>
+                                                <div className="col-lg-6 col-12">
+                                                    <input type="text" readonly className="form-control" id="staticEmail" value="email@example.com" />
                                                 </div>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <label for="phone" class="col-sm-2 col-form-label">Phone</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" readOnly class="form-control" value="+1654987234" id="phone" />
+                                            <div className="mb-3 row">
+                                                <label for="phone" className="col-lg-2 col-12 col-form-label">Phone</label>
+                                                <div className="col-lg-6 col-12">
+                                                    <input type="text" readOnly className="form-control" value="+1654987234" id="phone" />
                                                 </div>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <label for="waddress" class="col-sm-2 col-form-label">Wallet Address    ( BEP20     )</label>
-                                                <div class="col-sm-6">
-                                                    <input type="text" class="form-control" value="#dfgdft45435dfg" id="waddress" />
+                                            <div className="mb-3 row">
+                                                <label for="waddress" className="col-lg-2 col-12 col-form-label">Wallet Address    ( BEP20     )</label>
+                                                <div className="col-lg-6 col-12">
+                                                    <input type="text" className="form-control" value="#dfgdft45435dfg" id="waddress" />
                                                 </div>
                                             </div>
-                                            <div class="mb-3 row">
-                                                <label for="pphoto" class="col-sm-2 col-form-label">Profile Photo</label>
-                                                <div class="col-sm-6 d-flex gap-1  ">
+                                            <div className="mb-3 row">
+                                                <label for="pphoto" className="col-lg-2 col-12 col-form-label">Profile Photo</label>
+                                                <div className="col-lg-6 col-12 d-flex flex-lg-row flex-column gap-1  ">
                                                     <input type="file" />
-                                                    <img  width={"150px"} src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1739962202~exp=1739965802~hmac=60b9d7236ff78cb0b9597974c83f55713a1f5d674ce16effd74f24b9a6102871&w=826" alt="" />
+                                                    <img width={"150px"} src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1739962202~exp=1739965802~hmac=60b9d7236ff78cb0b9597974c83f55713a1f5d674ce16effd74f24b9a6102871&w=826" alt="" />
                                                 </div>
                                             </div>
 
-                                            <div className='my-5 col-10  text-center'>
-<button className='btn-filled mx-auto'>
-    Update
-</button>
+                                            <div className='my-5 col-lg-10 col-12  '>
+                                                <button className='btn-filled mx-auto'>
+                                                    Update
+                                                </button>
                                             </div>
                                         </Form>
 
@@ -75,7 +75,7 @@ const Profile = () => {
 
                         </Container>
                     </section>
-                    <FooterBottom/>
+                    <FooterBottom />
                 </Row>
             </Container>
         </>

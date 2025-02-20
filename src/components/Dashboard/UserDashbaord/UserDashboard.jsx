@@ -7,15 +7,16 @@ import BoxImg from '../../Home/BoxImg';
 import boxImg from "../../../assets/Images/boxImg.jpg";
 import { Link } from 'react-router';
 import Rewards from './Rewards';
+import Ticket from './Ticket';
 
 const UserDashboard = () => {
     return (
         <>
             <div className="container-fluid px-3 px-lg-4 px-md-4 px-2">
-                <div className="row flex-lg-row flex-column-reverse dashboard_item">
-                    <div className="col-lg-9  liftedup_stack">
+                <div className="row flex-row dashboard_item">
+                    <div className="col-xl-9 col-md-8 col-12  liftedup_stack">
                         <div className='themeCard mb-4'>
-                            <div className='cardHeading d-flex align-items-center justify-content-between mb-4'>
+                            <div className='cardHeading d-flex flex-lg-row flex-column align-items-center justify-content-between mb-4'>
                                 <h3>Overall Portfolo</h3>
                                 <div className='d-flex align-items-center gap-3'>
                                     <button className='btn-hollow'>
@@ -26,8 +27,8 @@ const UserDashboard = () => {
                                     </button>
                                 </div>
                             </div>
-                            <Row className='portfolioInfo '>
-                                <Col xs={3}>
+                            <Row className='portfolioInfo text-lg-start text-center'>
+                                <Col lg={3} xs={6}>
                                     <div>
                                         <p className='mb-2 text_primary'>Affiliate Income</p>
                                         <h2 className='fw-bold'>
@@ -35,7 +36,7 @@ const UserDashboard = () => {
                                         </h2>
                                     </div>
                                 </Col>
-                                <Col xs={3}>
+                                <Col lg={3} xs={6}>
                                     <div>
                                         <p className='mb-2 text_primary'>Available Amount</p>
                                         <h2 className='fw-bold'>
@@ -43,7 +44,7 @@ const UserDashboard = () => {
                                         </h2>
                                     </div>
                                 </Col>
-                                <Col xs={3}>
+                                <Col lg={3} xs={6}>
                                     <div>
                                         <p className='mb-2 text_primary'>Available Amount</p>
                                         <h2 className='fw-bold'>
@@ -51,7 +52,7 @@ const UserDashboard = () => {
                                         </h2>
                                     </div>
                                 </Col>
-                                <Col xs={3}>
+                                <Col lg={3} xs={6}>
                                     <div>
                                         <p className='mb-2 text_primary'>Available Amount</p>
                                         <h2 className='fw-bold'>
@@ -72,23 +73,23 @@ const UserDashboard = () => {
                                         </button>
                                     </div>
                                     <Row className='portfolioInfo '>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
-                                        <Col xs={4} className='mb-4'>
-                                            <img src={ticketimg} height="100px" width={"100%"} />
+                                        <Col xl={4} md={6} className='mb-4'>
+                                            <Ticket />
                                         </Col>
 
                                     </Row>
@@ -106,9 +107,9 @@ const UserDashboard = () => {
                                             View All
                                         </button>
                                     </div>
-                                    <Row className='Affilatemembers '>
+                                    <Row className='Affilatemembers table-responsive'>
 
-                                        <table class="table table-dark table-striped">
+                                        <table className="table table-dark table-striped ">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Sr. </th>
@@ -263,7 +264,7 @@ const UserDashboard = () => {
 
                         </Row>
                     </div>
-                    <div className="col-lg-3 col-md-3 col-12  liftedup_stack mb-3">
+                    <div className="col-xl-3 col-md-4 col-12  liftedup_stack-md mb-3">
                         <Rewards />
                     </div>
                 </div>

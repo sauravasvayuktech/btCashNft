@@ -22,23 +22,17 @@ const MyAffiliates = () => {
                                         <div className='cardHeading d-flex align-items-center justify-content-between mb-4'>
                                             <h3>Recent Affiliatess</h3>
                                             <div className='d-flex align-items-center gap-3'>
-                                                <Dropdown >
-                                                    <Dropdown.Toggle variant="warning" id="dropdown-basic">
-                                                        Levels
-                                                    </Dropdown.Toggle>
-
-                                                    <Dropdown.Menu>
-                                                        <Dropdown.Item href="#/action-1">1</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-2">2</Dropdown.Item>
-                                                        <Dropdown.Item href="#/action-3">3</Dropdown.Item>
-                                                    </Dropdown.Menu>
-                                                </Dropdown>
-
+                                                <select className="form-select" aria-label="Default select example">
+                                                    <option selected>Levels</option>
+                                                    <option value="1">Level 1</option>
+                                                    <option value="2">Level 2</option>
+                                                    <option value="3">Level 3</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <Row className='Affilatemembers '>
+                                        <Row className='Affilatemembers table-responsive'>
 
-                                            <table class="table table-dark table-striped">
+                                            <table className="table table-dark table-striped">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">Sr. </th>
@@ -185,25 +179,24 @@ const MyAffiliates = () => {
 
                                                 </tbody>
                                             </table>
-                                            <div className='d-flex align-items-center justify-content-center'>
+                                            <div className='d-flex align-items-center justify-content-end mt-3'>
 
-                                            <Pagination>
-                                                <Pagination.First />
-                                                <Pagination.Prev />
-                                                <Pagination.Item>{1}</Pagination.Item>
-                                                <Pagination.Ellipsis />
+                                                <Pagination>
+                                                    <Pagination.First />
+                                                    <Pagination.Prev />
+                                                    <Pagination.Item>{1}</Pagination.Item>
+                                                    
 
-                                                <Pagination.Item>{10}</Pagination.Item>
-                                                <Pagination.Item>{11}</Pagination.Item>
-                                                <Pagination.Item active>{12}</Pagination.Item>
-                                                <Pagination.Item>{13}</Pagination.Item>
-                                                <Pagination.Item disabled>{14}</Pagination.Item>
+                                                    
+                                                    <Pagination.Item active>{2}</Pagination.Item>
+                                                    
+                                                    
 
-                                                <Pagination.Ellipsis />
-                                                <Pagination.Item>{20}</Pagination.Item>
-                                                <Pagination.Next />
-                                                <Pagination.Last />
-                                            </Pagination>
+                                                    
+                                                    <Pagination.Item>{3}</Pagination.Item>
+                                                    <Pagination.Next />
+                                                    <Pagination.Last />
+                                                </Pagination>
                                             </div>
 
                                         </Row>
@@ -215,7 +208,7 @@ const MyAffiliates = () => {
 
                         </Container>
                     </section>
-                    <FooterBottom/>
+                    <FooterBottom />
                 </Row>
             </Container>
         </>

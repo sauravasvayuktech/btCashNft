@@ -90,7 +90,7 @@ export default function SideBar() {
     <aside
       ref={sidebarRef}
       id="layout-menu"
-      className={`layout-menu menu-vertical menu bg-menu-theme d-lg-block d-md-block d-none ${isOpen ? "open" : ""
+      className={`layout-menu menu-vertical menu bg-menu-theme d-lg-block  d-none ${isOpen ? "open" : ""
         }`}
       style={{
         borderRight: "1px solid #e6ecf52c",
@@ -137,7 +137,7 @@ export default function SideBar() {
       <ul className="menu-inner py-1 list-unstyled">
         <li className="menu-item open">
           <Link to="/user-dashboard" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i class="menu-icon tf-icons ti ti-smart-home"></i> */}
+            {/* <i className="menu-icon tf-icons ti ti-smart-home"></i> */}
            
           
             <MdDashboard  className={`bg-transparent d-flex justify-content-center align-items-center fs-3  `}/>
@@ -179,7 +179,7 @@ export default function SideBar() {
 
         <li className="menu-item">
           <Link to="/community" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i class="menu-icon tf-icons ti ti-wallet"></i> */}
+            {/* <i className="menu-icon tf-icons ti ti-wallet"></i> */}
      
             <RiUserCommunityFill className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
             <div data-i18n="Wallet" className={`${isOpen ? "" : "d-none"}`}>Community</div>
@@ -201,15 +201,15 @@ export default function SideBar() {
           </Link>
         </li>
         {/* <li className="pt-5">
-          <div class="d-flex justify-content-center align-items-center gap-2 px-0 w-100 ps-2">
+          <div className="d-flex justify-content-center align-items-center gap-2 px-0 w-100 ps-2">
             <div className="w-100">
               <img src={sunI} alt="" style={{ width: '20px' }} />
             </div>
-            <label class="switch switch-primary me-0">
-              <input type="checkbox" class="switch-input" id="modeChanges" onChange={changeMode} />
-              <span class="switch-toggle-slider">
-                <span class="switch-on"></span>
-                <span class="switch-off"></span>
+            <label className="switch switch-primary me-0">
+              <input type="checkbox" className="switch-input" id="modeChanges" onChange={changeMode} />
+              <span className="switch-toggle-slider">
+                <span className="switch-on"></span>
+                <span className="switch-off"></span>
               </span>
             </label>
           </div>
