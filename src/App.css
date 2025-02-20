@@ -9,13 +9,20 @@
   --secondary: #9b9b9b;
   --box: #252525;
   --thmprimarycolor: rgb(255, 165, 0);
+  --slatecolor:#7c7c7c;
+  --colorgreen:#47ae8c;
+  --bs-table-bg: #ffa5001f !important;
 }
+
 
 body {
   background-color: var(--dark) !important;
   color: var(--light) !important;
   font-family: "Inter", serif !important;
+  font-size: 16px !important;
+  line-height: 1.2;
 }
+
 
 main {
   padding-inline: 4rem;
@@ -729,9 +736,31 @@ button.eyeIcons {
 }
 
 /* Dashbaord  */
+
+/* utilities  */
 .text_primary {
   color: var(--thmprimarycolor);
 }
+
+.fs14{
+  font-size: 14px !important;
+}
+.text_slate{
+  color: var(--slatecolor);
+}
+.textgreen{
+  color: var(--colorgreen);
+}
+
+.form-control {
+  color: #ffffff !important;
+  background-color: #ffffff00 !important;
+  border-radius: .375rem !important;
+}
+.form-control::placeholder{
+  color: #acacac;
+}
+
 
 .liftedup_stack {
   margin-top: -9rem !important;
@@ -739,7 +768,7 @@ button.eyeIcons {
 }
 .themeCard {
   background-color: #101010;
-  background-color: #10101029;
+  background-color: #10101045;
   border-radius: 18px;
   padding: 2rem;
   backdrop-filter: blur(20px);
@@ -748,7 +777,7 @@ button.eyeIcons {
 button.btn-hollow {
   background: transparent;
   border: 1px solid var(--thmprimarycolor);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 8px 32px;
   color: var(--thmprimarycolor);
   font-weight: 600;
@@ -756,13 +785,16 @@ button.btn-hollow {
 button.btn-filled {
   background: var(--thmprimarycolor);
   border: 1px solid var(--thmprimarycolor);
-  border-radius: 14px;
+  border-radius: 6px;
   padding: 8px 32px;
   color: #fff;
   font-weight: 600;
 }
 
+
+
 /* layout  */
+
 
 #layout-menu.open + .dashboard {
   max-width: calc(100% - 250px);
@@ -774,10 +806,18 @@ button.btn-filled {
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
+.fixedLayout{
+  position: fixed;
+  z-index: 999;
+  width: 99px;
+  left: 0;
+  top: 0;
+}
+
 
 /* cover image  */
 
-.coverImage {
+.coverImage{
   min-height: 320px;
   background-position: center;
   background-repeat: no-repeat;
@@ -954,4 +994,17 @@ button.btn-filled {
   section.contest-wrapper {
     margin-bottom: 6rem;
   }
+}
+.rewardAmount {
+  padding: 1rem;
+  border-block: 1px solid #5c5c5cb3;
+  background: radial-gradient(#000000c9, #43434352);
+}
+
+.table-dark {
+  --bs-table-bg: #ffa5001f !important;
+}
+
+.post-cta{
+  filter:grayscale(.5);
 }
