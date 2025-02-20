@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 const ResetPassword = () => {
   const onSubmitHandle = (e) => {
     e.preventDefault();
@@ -9,7 +7,7 @@ const ResetPassword = () => {
       <main>
         <section className="loginWrapper resetWrapper">
           <div className="loginform">
-            <h4 className="text-center mb-0">Login Form</h4>
+            <h4 className="text-center mb-0">Reset Password</h4>
             <form action="" className="pt-4" onClick={onSubmitHandle}>
               <div className="inputArea">
                 <label htmlFor="">User Name / Id</label>

@@ -1,4 +1,4 @@
-import { BsFillPatchCheckFill } from "react-icons/bs";
+// import { BsFillPatchCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Hero = ({ banner }) => {
@@ -13,8 +13,12 @@ const Hero = ({ banner }) => {
             <img src={shortImg} alt={imgAlt} />
           </div>
           <div className="heroTextInfo">
-            <h2 className="d-flex align-items-center gap-2">{title} <span className="fs-5"><BsFillPatchCheckFill /></span></h2>
-            <h6 className="d-flex align-items-center gap-2">{author} <span className="fs-6"><BsFillPatchCheckFill /></span></h6>
+            <h2 className="d-flex align-items-center gap-2">{title} 
+              {/* <span className="fs-5"><BsFillPatchCheckFill /></span> */}
+              </h2>
+            <h6 className="d-flex align-items-center gap-2">{author} 
+              {/* <span className="fs-6"><BsFillPatchCheckFill /></span> */}
+              </h6>
             <h6>{valueNum}</h6>
           </div>
         </div>

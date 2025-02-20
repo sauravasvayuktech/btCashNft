@@ -42,7 +42,7 @@ a {
 }
 
 .searchBar input {
-  width: 468px !important;
+  width: 468px;
   height: 48px;
   padding-inline: 3rem;
   background-color: var(--inputColor) !important;
@@ -136,6 +136,42 @@ a {
   color: var(--hover) !important;
 }
 
+.swiperTopPadding {
+  padding-top: 1.5rem !important;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  display: none;
+}
+
+.mobFooter-content {
+  text-align: center;
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--box);
+  padding: 0 0.5rem;
+  display: none;
+}
+
+.mobile-footer .row .col {
+  padding: 1rem 0.8rem;
+  border-left: 1px solid #ffffff08;
+}
+
+.textFooter-div {
+  padding-top: 0.2rem;
+}
+
 /* Home Page css */
 .hero-wrapper {
   border-radius: 1rem;
@@ -150,6 +186,10 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.hero-section.contestBanner,
+.hero-section2 {
+  background-image: url(./assets/Images/banner2.jpg);
 }
 
 .hero-section::after {
@@ -221,7 +261,7 @@ a {
 }
 
 .box-wrapper {
-  max-width: 282px;
+  /* max-width: 282px; */
   background-color: var(--box);
   border-radius: 0.8rem;
   overflow: hidden;
@@ -689,7 +729,6 @@ button.eyeIcons {
 }
 
 /* Dashbaord  */
-
 .text_primary {
   color: var(--thmprimarycolor);
 }
@@ -745,42 +784,6 @@ button.btn-filled {
   background-size: cover;
 }
 
-.swiperTopPadding {
-  padding-top: 1.5rem !important;
-}
-
-.mobile-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0.8rem;
-  display: none;
-}
-
-.mobFooter-content {
-  text-align: center;
-}
-
-.mobile-footer {
-  position: fixed;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  background: var(--box);
-  padding: 0 0.5rem;
-  display: none;
-}
-
-.mobile-footer .row .col {
-  padding: 1rem 0.8rem;
-  border-left: 1px solid #ffffff08;
-}
-
-.textFooter-div {
-  padding-top: 0.2rem;
-}
-
 /* Media */
 @media (width <= 1400px) {
   main {
@@ -817,6 +820,15 @@ button.btn-filled {
   }
 }
 
+@media(width <= 1200px){
+  .authText span svg {
+    display: none;
+  }
+  .searchBar input {
+    width: 315px;
+  }
+}
+
 @media (width <= 991px) {
   main {
     padding-inline: 1rem;
@@ -829,6 +841,17 @@ button.btn-filled {
   }
   .mobile-footer {
     display: block;
+  }
+  .playCard,
+  .winner-box-wrapper,
+  .howPlay-title + .row .col-lg-3 {
+    margin-bottom: 1rem;
+  }
+  .footer-bottom{
+    display: none;
+  }
+  footer{
+    margin-bottom: 5rem;
   }
 }
 
@@ -924,5 +947,11 @@ button.btn-filled {
   }
   section.singlePage-wrapper {
     margin-bottom: 5rem;
+  }
+  .userName-top + h2 {
+    font-size: 1.5rem;
+  }
+  section.contest-wrapper {
+    margin-bottom: 6rem;
   }
 }
