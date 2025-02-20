@@ -5,15 +5,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Hero from "./Hero";
-import shortImg from "../../assets/Images/shortImg.webp";
-import boxImg from "../../assets/Images/boxImg.jpg";
 import { Link } from "react-router";
 import BoxImg from "./BoxImg";
-import bannerImg from "../../assets/Images/banner.jpg";
 import WinnerList from "./WinnerList";
 import { PiSelectionAllFill } from "react-icons/pi";
 import PlayCard from "./PlayCard";
 import FeaturesCard from "./FeaturesCard";
+import shortImg from "../../assets/Images/shortImg.webp";
+import boxImg from "../../assets/Images/boxImg.jpg";
+import bannerImg from "../../assets/Images/banner.jpg";
 
 const Home = () => {
   const banner = [
@@ -27,7 +27,7 @@ const Home = () => {
       shortImg: shortImg,
     },
     {
-      heroSection: "hero-section",
+      heroSection: "hero-section hero-section2",
       imgAlt: "heroSection",
       title: "My Pet Hooligan",
       author: "By AMGI",
@@ -39,6 +39,7 @@ const Home = () => {
 
   const data = [
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -46,6 +47,7 @@ const Home = () => {
       price: "1000",
     },
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -53,6 +55,7 @@ const Home = () => {
       price: "1000",
     },
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -60,6 +63,7 @@ const Home = () => {
       price: "1000",
     },
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -67,6 +71,7 @@ const Home = () => {
       price: "1000",
     },
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -74,6 +79,7 @@ const Home = () => {
       price: "1000",
     },
     {
+      urlImg: "/singlepage",
       boxImg: boxImg,
       value: "5000",
       title: "Worldwide Webb Land",
@@ -190,7 +196,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Live Bid</h3>
             <div>
               <Link to="">
@@ -199,6 +205,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -222,11 +229,11 @@ const Home = () => {
                 slidesPerView: 4,
                 spaceBetween: 15,
               },
-              1024: {
+              1200: {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -245,7 +252,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper pt-0">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Upcoming Bid</h3>
             <div>
               <Link to="">
@@ -254,6 +261,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -277,11 +285,11 @@ const Home = () => {
                 slidesPerView: 4,
                 spaceBetween: 15,
               },
-              1024: {
+              1200: {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -300,7 +308,7 @@ const Home = () => {
 
       <section className="liveBid-wrapper pt-0">
         <Container fluid>
-          <div className="d-flex align-items-center justify-content-between mb-4">
+          <div className="d-flex align-items-center justify-content-between">
             <h3>Completed Bid</h3>
             <div>
               <Link to="">
@@ -309,6 +317,7 @@ const Home = () => {
             </div>
           </div>
           <Swiper
+          className="swiperTopPadding"
             spaceBetween={20}
             slidesPerView={6}
             breakpoints={{
@@ -332,11 +341,11 @@ const Home = () => {
                 slidesPerView: 4,
                 spaceBetween: 15,
               },
-              1024: {
+              1200: {
                 slidesPerView: 5,
                 spaceBetween: 18,
               },
-              1280: {
+              1600: {
                 slidesPerView: 6,
                 spaceBetween: 20,
               },
@@ -353,7 +362,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="winners-list-wrapper mb-5">
+      <section className="winners-list-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="winner-list-title mb-4">
             <h3>Hall of Champions: Winners List</h3>
@@ -361,7 +370,7 @@ const Home = () => {
           <Row>
             {winnerData.map((elem, index) => (
               <>
-                <Col lg={4} key={index}>
+                <Col lg={4} md={12} sm={12} key={index}>
                   <WinnerList winnerData={elem} />
                 </Col>
               </>
@@ -370,24 +379,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="winners-list-wrapper mb-5">
-        <Container fluid>
-          <div className="winner-list-title mb-4">
-            <h3>Completed Bid</h3>
-          </div>
-          <Row>
-            {winnerData.map((elem, index) => (
-              <>
-                <Col lg={4} key={index}>
-                  <WinnerList winnerData={elem} />
-                </Col>
-              </>
-            ))}
-          </Row>
-        </Container>
-      </section>
-
-      <section className="howPlay-wrapper mb-5">
+      <section className="howPlay-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="howPlay-title mb-4">
             <h3>How to Play</h3>
@@ -395,7 +387,7 @@ const Home = () => {
           <Row>
             {playData.map((data, index) => (
               <>
-                <Col lg={4} key={index}>
+                <Col lg={4} md={6} sm={6} key={index}>
                   <PlayCard playData={data} />
                 </Col>
               </>
@@ -404,7 +396,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="features-wrapper mb-5">
+      <section className="features-wrapper mb-3 mb-lg-5 mb-md-4">
         <Container fluid>
           <div className="howPlay-title mb-4">
             <h3>Our Features</h3>
@@ -412,7 +404,7 @@ const Home = () => {
           <Row>
             {featuresCards.map((data, index) => (
               <>
-                <Col lg={3} key={index}>
+                <Col lg={3} md={6} sm={6} key={index}>
                   <FeaturesCard featuresCards={data} />
                 </Col>
               </>

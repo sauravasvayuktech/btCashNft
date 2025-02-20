@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Login = () => {
-    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-    const togglePasswordVisibility = () => {
-      setIsPasswordVisible(!isPasswordVisible);
-    };
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
 
-    const onSubmitHandle = (e) => {
-        e.preventDefault();
-    }
-    const navigate = useNavigate(); 
-    const handleLogin = () => {
-      navigate('/user-dashboard'); 
-    };
+  const onSubmitHandle = (e) => {
+    e.preventDefault();
+  };
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/user-dashboard");
+  };
   return (
     <>
       <main>
@@ -33,7 +33,7 @@ const Login = () => {
                   className="w-100 px-3 py-2 rounded"
                 />
               </div>
-              <div className="">
+              <div className="passwordAreaInput">
                 <label htmlFor="password">Password</label>
                 <br />
                 <div className="inputArea">
@@ -51,16 +51,23 @@ const Login = () => {
                   </button>
                 </div>
               </div>
-              <div></div>
-              <button className="mb-4 mt-2 authText formSubmitBtn border-0" onClick={handleLogin}>
-                Login 
+              <button
+                className="mb-4 mt-2 authText formSubmitBtn border-0"
+                onClick={handleLogin}
+              >
+                Login
               </button>
-              <p>
-                Don't have an account?{" "}
-                <span style={{ color: "#e9a031" }}>
-                  <Link to="/">Sign up</Link>
-                </span>
-              </p>
+              <div className="d-flex justify-content-between align-items-center flex-wrap">
+                <p  className="mb-1 mb-lg-0">
+                  Don't have an account?{" "}
+                  <span style={{ color: "#e9a031" }}>
+                    <Link to="/signup">Sign up</Link>
+                  </span>
+                </p>
+                <div className="resetUrl">
+                  <Link to="/reset" style={{ color: "#e9a031" }}>Forgot Password</Link>
+                </div>
+              </div>
             </form>
           </div>
         </section>

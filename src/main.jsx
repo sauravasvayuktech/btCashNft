@@ -11,12 +11,20 @@ import Profile from "./components/Dashboard/UserDashbaord/Profile.jsx";
 import MyTickets from "./components/Dashboard/UserDashbaord/MyTickets.jsx";
 import MyAffiliates from "./components/Dashboard/UserDashbaord/MyAffiliates.jsx";
 import Community from "./components/Dashboard/UserDashbaord/Community.jsx";
+import Signup from "./components/Signup/Signup.jsx";
+import ResetPassword from "./components/ResetPassword/ResetPassword.jsx";
+import ContestPage from "./components/ContestPage/ContestPage.jsx";
+import WinnerPage from "./components/WinnerPage/WinnerPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/reset" element={<ResetPassword />} />
+      <Route path="/contest" element={<ContestPage />} />
+      <Route path="/winner" element={<WinnerPage />} />
       <Route path="/singlepage" element={<SinglePage />} />
       <Route path="/user-dashboard" element={<UserDashbaord />} />
       <Route path="/user-profile" element={<Profile />} />

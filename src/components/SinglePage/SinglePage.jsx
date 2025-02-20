@@ -42,7 +42,7 @@ const SinglePage = () => {
   return (
     <>
       <main>
-        <section className="singlePage-wrapper py-5">
+        <section className="singlePage-wrapper py-3 py-lg-5 py-md-4">
           <Container fluid>
             <Row>
               <Col lg={6}>

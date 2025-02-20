@@ -2,7 +2,7 @@ const FeaturesCard = ({featuresCards}) => {
     const {featureImg,title,para} = featuresCards;
   return (
     <>
-      <div className="featuresCard h-100">
+      <div className="featuresCard">
         <div className="featureBanner">
           <img src={featureImg} alt="" className="img-fluid" />
         </div>

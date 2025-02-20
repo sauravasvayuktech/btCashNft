@@ -1,11 +1,11 @@
-import { Link } from "react-router";
-import boxImg from "../../assets/Images/boxImg.jpg";
+import { Link, useLocation } from "react-router";
 
-const BoxImg = ({data}) => {
-  const { boxImg, value, title, auth, price } = data;
+const BoxImg = ({ data }) => {
+  const location = useLocation();
+  const { boxImg, value, title, auth, price,urlImg } = data;
   return (
     <>
-      <Link to="/">
+      <Link to={urlImg}>
         <div className="box-wrapper">
           <div className="boxImg-wrapper">
             <img src={boxImg} alt="" className="boxImg img-fluid" />
@@ -46,6 +46,13 @@ const BoxImg = ({data}) => {
               </div>
             </div>
           </div>
+          {location.pathname === "/contest" && (
+            <Link to="/singlepage">
+              <div className="authText mb-3 mx-2 mx-lg-3 mb-lg-4">
+                <span>Place a Bid</span>
+              </div>
+            </Link>
+          )}
         </div>
       </Link>
     </>
