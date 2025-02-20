@@ -841,6 +841,8 @@ button.btn-filled {
   transition: all .2s ease-in-out;
 }
 
+
+
 #layout-menu.open .fixedLayout {
   width: 250px !important;
   transition: all .09s ease-in-out;

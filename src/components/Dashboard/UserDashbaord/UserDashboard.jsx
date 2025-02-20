@@ -19,7 +19,7 @@ const UserDashboard = () => {
                             <div className='cardHeading d-flex flex-lg-row flex-column align-items-center justify-content-between mb-4'>
                                 <h3>Overall Portfolo</h3>
                                 <div className='d-flex align-items-center gap-3'>
-                                    <button className='btn-hollow'>
+                                    <button className='btn-hollow '>
                                         Withdraw
                                     </button>
                                     <button className='btn-filled'>
