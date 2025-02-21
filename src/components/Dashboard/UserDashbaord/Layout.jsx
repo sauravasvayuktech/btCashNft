@@ -30,10 +30,10 @@ const Layout = () => {
                         <div className="coverImage" style={{ backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-digital-wave-pattern-with-vibrant-colors-dots_1176110-5032.jpg?w=1380)` }}>
 
                         </div>
-                        {/* <Outlet/> */}
-                        <UserDashboard />
+                        <Outlet />
+                        {/* <UserDashboard /> */}
                     </section>
-                    <MobileFooter/>
+                    <MobileFooter />
                     <FooterBottom />
                 </Row>
             </Container>

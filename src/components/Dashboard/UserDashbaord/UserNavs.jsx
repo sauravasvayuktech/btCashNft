@@ -37,7 +37,7 @@ const UserNavs = ({isOpen,setIsOpen}) => {
                     </Link>
                 </li>
                 <li className="menu-item">
-                    <Link to="/user-profile" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
+                    <Link to="/user-dashboard/profile" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
                         {/* <i className="fa-solid fa-bars"></i> */}
 
 
@@ -49,7 +49,7 @@ const UserNavs = ({isOpen,setIsOpen}) => {
                 </li>
 
                 <li className="menu-item">
-                    <Link to="/myaffiliates" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
+                    <Link to="/user-dashboard/myaffiliates" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
                         {/* <i className="fa-solid fa-trophy"></i> */}
 
                         <TbAffiliateFilled className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
@@ -59,7 +59,7 @@ const UserNavs = ({isOpen,setIsOpen}) => {
                 </li>
 
                 <li className="menu-item">
-                    <Link to="/mytickets" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
+                    <Link to="/user-dashboard/mytickets" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
 
 
                         <IoTicketSharp className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
@@ -69,7 +69,7 @@ const UserNavs = ({isOpen,setIsOpen}) => {
                 </li>
 
                 <li className="menu-item">
-                    <Link to="/community" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
+                    <Link to="/user-dashboard/community" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}`}>
                         {/* <i className="menu-icon tf-icons ti ti-wallet"></i> */}
 
                         <RiUserCommunityFill className="bg-transparent d-flex justify-content-center align-items-center fs-3" />

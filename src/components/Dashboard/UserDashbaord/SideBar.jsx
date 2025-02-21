@@ -130,7 +130,7 @@ export default function SideBar({isMobileNav}) {
     >
     <div className="fixedLayout">
     <div className="app-brand demo mt-4 mb-lg-0 mb-4" style={{ margin: "auto" }}>
-        <Link to="/user/dashboard" className="app-brand-link">
+        <Link to="/" className="app-brand-link">
           <span className="app-brand-logo demo">
             <img
               className="mt-2 mb-2"
