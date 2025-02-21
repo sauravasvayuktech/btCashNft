@@ -128,7 +128,8 @@ export default function SideBar({isMobileNav}) {
         transition: "width 0.3s",
       }}
     >
-    <div className="fixedLayout">
+    <div className="fixedLayout"
+    >
     <div className="app-brand demo mt-4 mb-lg-0 mb-4" style={{ margin: "auto" }}>
         <Link to="/" className="app-brand-link">
           <span className="app-brand-logo demo">
