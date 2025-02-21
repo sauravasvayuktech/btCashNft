@@ -8,11 +8,14 @@ import { BiSolidChevronLeftCircle, BiSolidChevronRightCircle } from "react-icons
 import { RiLogoutCircleLine, RiShieldUserFill, RiUserCommunityFill } from "react-icons/ri";
 import { TbAffiliateFilled } from "react-icons/tb";
 import { IoTicketSharp } from "react-icons/io5";
+import UserNavs from "./UserNavs";
 
-export default function SideBar() {
+export default function SideBar({isMobileNav}) {
   const [category, setCategory] = useState(false);
   const [income, setIncome] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileNav, setmobileNav] = useState(false);
+  const [mobileNavVisibility, setmobileNavVisibility] = useState("d-none");
   const sidebarRef = useRef(null);
 
   const navigate = useNavigate();
@@ -25,6 +28,13 @@ export default function SideBar() {
     }
   };
 
+  // const MobileNavActive = () =>{
+  //   if(isMobileNav){
+  //     setmobileNav(true)
+  //     setIsOpen(true)
+  //     setmobileNavVisibility("d-block")
+  //   }
+  // }
 
 
 
@@ -84,23 +94,42 @@ export default function SideBar() {
     });
   });
 
+  const [visibility, setVisibility] = useState("d-none");
 
+  useEffect(() => {
+    if (isOpen) {
+      const timer = setTimeout(() => {
+        setVisibility("d-block");
+      }, 150);
+      return () => clearTimeout(timer); // Cleanup timeout on unmount or state change
+    } else {
+      setVisibility("d-none");
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    if(isMobileNav){
+      setmobileNav(true)
+      setIsOpen(true)
+      setmobileNavVisibility("d-block")
+    }
+  }, [isMobileNav]);
 
   return (
     <aside
       ref={sidebarRef}
       id="layout-menu"
-      className={`layout-menu menu-vertical menu bg-menu-theme d-lg-block  d-none ${isOpen ? "open" : ""
+      className={`layout-menu menu-vertical menu bg-menu-theme ${mobileNavVisibility} d-lg-block   ${isOpen ? "open" : ""
         }`}
       style={{
-        borderRight: "1px solid #e6ecf52c",
+        
         width: isOpen ? "250px" : "99px",
         textAlign: "center",
         transition: "width 0.3s",
       }}
     >
     <div className="fixedLayout">
-    <div className="app-brand demo mt-4" style={{ margin: "auto" }}>
+    <div className="app-brand demo mt-4 mb-lg-0 mb-4" style={{ margin: "auto" }}>
         <Link to="/user/dashboard" className="app-brand-link">
           <span className="app-brand-logo demo">
             <img
@@ -117,7 +146,7 @@ export default function SideBar() {
       </p>
 
       <button
-        className="layout-menu-toggle menu-link mb-4 d-flex align-items-center gap-3 text-large ms-auto w-100"
+        className="layout-menu-toggle menu-link mb-4 d-lg-flex d-none align-items-center gap-3 text-large ms-auto w-100"
         onClick={handleToggle}
         style={{ background: "none", border: "none" }}
       >
@@ -134,87 +163,7 @@ export default function SideBar() {
       </button>
 
       <div className="menu-inner-shadow"></div>
-      <ul className="menu-inner py-1 list-unstyled">
-        <li className="menu-item open">
-          <Link to="/user-dashboard" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i className="menu-icon tf-icons ti ti-smart-home"></i> */}
-           
-          
-            <MdDashboard  className={`bg-transparent d-flex justify-content-center align-items-center fs-3  `}/>
-            
-            <div data-i18n="Dashboard" className={`${isOpen ? "" : "d-none"}`}>Dashboard</div>
-          </Link>
-        </li>
-        <li className="menu-item">
-          <Link to="/user-profile" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i className="fa-solid fa-bars"></i> */}
-          
-           
-            <RiShieldUserFill className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
-              
-            
-            <div data-i18n="Stake Plan" className={`${isOpen ? "" : "d-none"}`}>Profile</div>
-          </Link>
-        </li>
-
-        <li className="menu-item">
-          <Link to="/myaffiliates" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i className="fa-solid fa-trophy"></i> */}
-           
-              <TbAffiliateFilled className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
-           
-            <div data-i18n="Staking History" className={`${isOpen ? "" : "d-none"}`}>MyAffiliate </div>
-          </Link>
-        </li>
-
-        <li className="menu-item">
-          <Link to="/mytickets" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-           
-         
-            <IoTicketSharp className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
-           
-            <div data-i18n="Transactions" className={`${isOpen ? "" : "d-none"}`}>My Tickets</div>
-          </Link>
-        </li>
-
-        <li className="menu-item">
-          <Link to="/community" className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i className="menu-icon tf-icons ti ti-wallet"></i> */}
-     
-            <RiUserCommunityFill className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
-            <div data-i18n="Wallet" className={`${isOpen ? "" : "d-none"}`}>Community</div>
-          </Link>
-        </li>
-    
-
-
-  
-
-
-
-        <li className="menu-item">
-          <Link className={`menu-link  mb-4 d-flex align-items-center gap-3 sidemenu-dash ${isOpen ? "ms-5" : "justify-content-center ms-0"}` }>
-            {/* <i className="menu-icon tf-icons ti ti-logout"></i> */}
-            <RiLogoutCircleLine className="bg-transparent d-flex justify-content-center align-items-center fs-3" />
-            
-            <div data-i18n="Logout" className={`${isOpen ? "" : "d-none"}`}>Logout</div>
-          </Link>
-        </li>
-        {/* <li className="pt-5">
-          <div className="d-flex justify-content-center align-items-center gap-2 px-0 w-100 ps-2">
-            <div className="w-100">
-              <img src={sunI} alt="" style={{ width: '20px' }} />
-            </div>
-            <label className="switch switch-primary me-0">
-              <input type="checkbox" className="switch-input" id="modeChanges" onChange={changeMode} />
-              <span className="switch-toggle-slider">
-                <span className="switch-on"></span>
-                <span className="switch-off"></span>
-              </span>
-            </label>
-          </div>
-        </li> */}
-      </ul>
+      <UserNavs isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
     </aside>
   );

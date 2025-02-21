@@ -9,6 +9,7 @@ import { Link, Outlet } from 'react-router';
 import Rewards from './Rewards';
 import FooterBottom from '../../Footer/FooterBottom';
 import UserDashboard from './UserDashboard';
+import MobileFooter from '../../Footer/MobileFooter';
 
 const elem = {
     boxImg: boxImg,
@@ -32,6 +33,7 @@ const Layout = () => {
                         {/* <Outlet/> */}
                         <UserDashboard />
                     </section>
+                    <MobileFooter/>
                     <FooterBottom />
                 </Row>
             </Container>

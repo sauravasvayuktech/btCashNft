@@ -804,8 +804,12 @@ button.btn-hollow {
   padding: 8px 32px;
   color: var(--thmprimarycolor);
   font-weight: 600;
+  transition: all .2s ease-in-out;
 }
-
+button.btn-hollow:hover{
+  background: var(--thmprimarycolor);
+  color: #fff;
+}
 button.btn-filled {
   background: var(--thmprimarycolor);
   border: 1px solid var(--thmprimarycolor);
@@ -813,6 +817,11 @@ button.btn-filled {
   padding: 8px 32px;
   color: #fff;
   font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+button.btn-filled:hover{
+  background:transparent;
+  color: var(--thmprimarycolor);
 }
 
 
@@ -832,14 +841,7 @@ button.btn-filled {
   transition: all 0.4s ease-in-out;
 }
 
-.fixedLayout {
-  position: fixed;
-  z-index: 999;
-  width: 99px;
-  left: 0;
-  top: 0;
-  transition: all .2s ease-in-out;
-}
+
 
 
 
@@ -1002,6 +1004,17 @@ textarea.form-control:focus {
 }
 
 
+/* offcanvas  */
+
+.offcanvas {
+  max-width: 300px !important;
+  background: #1d1d1d;
+  color: #fff;
+}
+.offcanvas .btn-close{
+filter: invert(1);
+opacity: 1;
+}
 
 
 
@@ -1062,7 +1075,20 @@ textarea.form-control:focus {
   }
 }
 
-@media (width <=991px) {
+@media (width >=991px) {
+  .fixedLayout {
+    position: fixed;
+    z-index: 999;
+    width: 99px;
+    left: 0;
+    top: 0;
+    transition: all .2s ease-in-out;
+  }
+  #layout-menu{
+    border-right: 1px solid #e6ecf52c
+  }
+}
+  @media (width <=991px) {
   main {
     padding-inline: 1rem;
   }

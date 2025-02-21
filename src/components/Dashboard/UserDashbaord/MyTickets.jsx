@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import Rewards from './Rewards';
 import FooterBottom from '../../Footer/FooterBottom';
 import Ticket from './Ticket';
+import MobileFooter from '../../Footer/MobileFooter';
 
 const MyTickets = () => {
     return (
@@ -112,6 +113,7 @@ const MyTickets = () => {
 
                         </Container>
                     </section>
+                    <MobileFooter/>
                     <FooterBottom />
                 </Row>
             </Container>

@@ -3,6 +3,7 @@ import { Col, Container, Dropdown, Pagination, Row } from 'react-bootstrap'
 import SideBar from './SideBar'
 import { Link } from 'react-router'
 import FooterBottom from '../../Footer/FooterBottom'
+import MobileFooter from '../../Footer/MobileFooter'
 
 const MyAffiliates = () => {
     return (
@@ -208,6 +209,7 @@ const MyAffiliates = () => {
 
                         </Container>
                     </section>
+                    <MobileFooter/>
                     <FooterBottom />
                 </Row>
             </Container>

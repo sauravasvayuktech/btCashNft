@@ -13,6 +13,7 @@ import BoxImg from '../../Home/BoxImg';
 import boxImg from "../../../assets/Images/boxImg.jpg";
 import FooterBottom from '../../Footer/FooterBottom'
 import EmojiPicker from 'emoji-picker-react'
+import MobileFooter from '../../Footer/MobileFooter'
 
 const Community = () => {
 
@@ -128,6 +129,7 @@ const Community = () => {
                             </div>
                         </div>
                     </section>
+                    <MobileFooter/>
                     <FooterBottom />
                 </Row>
             </Container>

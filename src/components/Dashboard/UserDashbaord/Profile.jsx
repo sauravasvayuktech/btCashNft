@@ -7,6 +7,7 @@ import BoxImg from '../../Home/BoxImg';
 import boxImg from "../../../assets/Images/boxImg.jpg";
 import { Form, Link } from 'react-router';
 import FooterBottom from '../../Footer/FooterBottom';
+import MobileFooter from '../../Footer/MobileFooter';
 
 
 const Profile = () => {
@@ -75,6 +76,7 @@ const Profile = () => {
 
                         </Container>
                     </section>
+                    <MobileFooter/>
                     <FooterBottom />
                 </Row>
             </Container>
