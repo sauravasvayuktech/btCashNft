@@ -13,9 +13,7 @@ import MobileFooter from '../../Footer/MobileFooter';
 const Profile = () => {
     return (
         <>
-            <Container fluid>
-                <Row>
-                    <SideBar />
+
 
 
 
@@ -75,8 +73,7 @@ const Profile = () => {
                     </Container>
 
 
-                </Row>
-            </Container>
+
         </>
     )
 }

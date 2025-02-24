@@ -11,14 +11,7 @@ import MobileFooter from '../../Footer/MobileFooter';
 const MyTickets = () => {
     return (
         <>
-            <Container fluid>
-                <Row>
-                    <SideBar />
-
-                    <section className="dashboard px-0">
-                        <div className="coverImage" style={{ backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-digital-wave-pattern-with-vibrant-colors-dots_1176110-5032.jpg?w=1380)` }}>
-
-                        </div>
+      
                         <Container fluid>
                             <Row>
                                 <div className="col-lg-9  liftedup_stack">
@@ -112,11 +105,8 @@ const MyTickets = () => {
                             </Row>
 
                         </Container>
-                    </section>
-                    <MobileFooter/>
-                    <FooterBottom />
-                </Row>
-            </Container>
+                   
+              
         </>
     )
 }
