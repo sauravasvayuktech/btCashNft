@@ -396,7 +396,7 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="features-wrapper mb-3 mb-lg-5 mb-md-4">
+      <section className="features-wrapper mb-3 mb-lg-5 mb-md-4 px-lg-5 px-3">
         <Container fluid>
           <div className="howPlay-title mb-4">
             <h3>Our Features</h3>
